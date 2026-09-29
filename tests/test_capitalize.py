@@ -1,9 +1,6 @@
 from capitalize import capitalize
 
-if capitalize("hello") != "Hello":
-    raise Exception("Функция работает неверно!")
-
-if capitalize("") != "":
-    raise Exception("Функция работает неверно!")
+assert capitalize("hello") == "Hello", "capitalize не делает первую букву заглавной"
+assert capitalize("") == "", "capitalize ломается на пустой строке"
 
 print("Все тесты пройдены!")
